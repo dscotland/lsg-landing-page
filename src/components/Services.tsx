@@ -98,14 +98,14 @@ import {
               }
               href={'#'}
             />
-            {/* <Card
-              heading={'Heading'}
+            <Card
+              heading={'Temperature-controlled Shipping'}
               icon={<Icon as={FcPackage} w={10} h={10} />}
               description={
-                'Lorem ipsum dolor sit amet catetur, adipisicing elit.'
+                'Description of temperature-controlled shipping to go here.'
               }
               href={'#'}
-            /> */}
+            />
           </Flex>
         </Container>
       </Box>

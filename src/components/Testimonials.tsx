@@ -6,6 +6,7 @@ import {
     Flex,
     Icon,
     SimpleGrid,
+    Heading,
     useColorModeValue,
   } from '@chakra-ui/react';
   
@@ -141,14 +142,9 @@ import {
         width={'full'}
         overflow={'hidden'}>
         <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
-          <chakra.h1
-            py={5}
-            fontSize={48}
-            fontFamily={'Work Sans'}
-            fontWeight={'bold'}
-            color={useColorModeValue('gray.700', 'gray.50')}>
-            Hear what our other clients have to say
-          </chakra.h1>
+            <Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'}>
+                Hear what our other clients have to say
+            </Heading>
           <chakra.h2
             margin={'auto'}
             width={'70%'}
@@ -159,7 +155,7 @@ import {
             <chakra.strong color={useColorModeValue('gray.700', 'gray.50')}>
               top companies
             </chakra.strong>{' '}
-            customers use Las Secuelas Group Ltd to manage transport their precious cargo!
+             use Las Secuelas Group Ltd to transport their precious cargo!
           </chakra.h2>
         </Box>
         <SimpleGrid
