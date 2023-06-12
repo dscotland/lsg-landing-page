@@ -51,36 +51,33 @@ import {
                         <Button
                           size="md"
                           height="48px"
-                          width="200px"
                           variant="ghost"
                           color="#DCE2FF"
                           _hover={{}}
-                          leftIcon={<MdPhone color="#1970F1" size="20px" />}>
+                          leftIcon={<MdPhone color="white" size="20px" />}>
                           +1876-12345678
                         </Button>
                         <Button
                           size="md"
                           height="48px"
-                          width="200px"
                           variant="ghost"
                           color="#DCE2FF"
                           _hover={{}}
-                          leftIcon={<MdEmail color="#1970F1" size="20px" />}>
+                          leftIcon={<MdEmail color="white" size="20px" />}>
                           lassecuelasgroup@gmail.com
                         </Button>
                         <Button
                           size="md"
                           height="48px"
-                          width="200px"
                           variant="ghost"
                           color="#DCE2FF"
                           _hover={{}}
-                          leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
+                          leftIcon={<MdLocationOn color="white" size="20px" />}>
                           Kingston, Jamaica
                         </Button>
                       </VStack>
                     </Box>
-                    <HStack
+                    {/* <HStack
                       mt={{ lg: 10, md: 10 }}
                       spacing={5}
                       px={5}
@@ -109,7 +106,7 @@ import {
                         _hover={{ bg: '#0D74FF' }}
                         icon={<BsInstagram size="28px" />}
                       />
-                    </HStack>
+                    </HStack> */}
                   </Box>
                 </WrapItem>
                 <WrapItem>

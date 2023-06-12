@@ -11,6 +11,10 @@ import {
     Popover,
     PopoverTrigger,
     PopoverContent,
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem,
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
@@ -20,6 +24,11 @@ import {
     CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
+    AddIcon,
+    EditIcon,
+    ExternalLinkIcon,
+    RepeatIcon,
+    
   } from '@chakra-ui/icons';
   
   export default function WithSubnavigation() {
@@ -38,14 +47,7 @@ import {
             flex={{ base: 1, md: 'auto' }}
             ml={{ base: -2 }}
             display={{ base: 'flex', md: 'none' }}>
-            <IconButton
-              onClick={onToggle}
-              icon={
-                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-              }
-              variant={'ghost'}
-              aria-label={'Toggle Navigation'}
-            />
+                <MobileNav/>
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
             <Text
@@ -60,10 +62,6 @@ import {
             </Flex>
           </Flex>
         </Flex>
-  
-        <Collapse in={isOpen} animateOpacity>
-          <MobileNav />
-        </Collapse>
       </Box>
     );
   }
@@ -151,14 +149,24 @@ import {
   
   const MobileNav = () => {
     return (
-      <Stack
-        bg={useColorModeValue('white', 'gray.800')}
-        p={4}
-        display={{ md: 'none' }}>
-        {NAV_ITEMS.map((navItem) => (
-          <MobileNavItem key={navItem.label} {...navItem} />
-        ))}
-      </Stack>
+        <Menu>
+            <MenuButton
+                as={IconButton}
+                color="white"
+                aria-label='Options'
+                icon={<HamburgerIcon />}
+                variant='unstyled'
+            />
+            <MenuList bgColor="white" color="black">
+                {NAV_ITEMS.map((item,index)=>{
+                    return (
+                        <MenuItem key={index} bgColor="inherit">
+                            <MobileNavItem key={index} {...item} />
+                        </MenuItem>
+                    )
+                })}
+            </MenuList>
+        </Menu>
     );
   };
   
@@ -192,22 +200,6 @@ import {
           )}
         </Flex>
   
-        <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-          <Stack
-            mt={2}
-            pl={4}
-            borderLeft={1}
-            borderStyle={'solid'}
-            borderColor={useColorModeValue('gray.200', 'gray.700')}
-            align={'start'}>
-            {children &&
-              children.map((child) => (
-                <Link key={child.label} py={2} href={child.href}>
-                  {child.label}
-                </Link>
-              ))}
-          </Stack>
-        </Collapse>
       </Stack>
     );
   };
@@ -238,7 +230,7 @@ import {
     },
     {
       label: 'Services',
-      href: '#services',
+      href: '/#services',
     //   children: [
     //     {
     //       label: 'Job Board',

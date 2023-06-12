@@ -44,20 +44,21 @@ import {
           }}
         >
           <CardBody>
-            <CardHeader fontWeight={"bold"} pl={0}>
+            <CardHeader fontWeight={"bold"} pl={0} textAlign={"center"}>
                 {serviceTitle}
             </CardHeader>
 
-            
+            <Center>  
             { 
                 serviceTitle === "Phone Support" ?
-                    <FaPhoneAlt size={25}/> :
+                    <FaPhoneAlt size={50} /> :
                 serviceTitle === "Pickup & Delivery" ?
-                    <FaTruck size={25}/> : 
+                    <FaTruck size={50}/> : 
                 serviceTitle === "Real Time Tracking" ?
-                    <FaSearchLocation size={25}/> : 
+                    <FaSearchLocation size={50}/> : 
                 null
             }
+            </Center>
   
             {/* <Heading
               size="md"
