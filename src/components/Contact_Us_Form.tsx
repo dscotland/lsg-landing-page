@@ -1,79 +1,170 @@
 import {
+    Container,
     Flex,
-    FormControl,
+    Box,
+    Heading,
     Text,
-    Input,
-    Textarea,
+    IconButton,
     Button,
-    useMediaQuery,
-    useToast,
-    Heading
+    VStack,
+    HStack,
+    Wrap,
+    WrapItem,
+    FormControl,
+    FormLabel,
+    Input,
+    InputGroup,
+    InputLeftElement,
+    Textarea,
   } from '@chakra-ui/react';
-  import React from 'react';
+  import {
+    MdPhone,
+    MdEmail,
+    MdLocationOn,
+    MdFacebook,
+    MdOutlineEmail,
+  } from 'react-icons/md';
+  import { BsTwitter, BsInstagram, BsPerson } from 'react-icons/bs';
   
-  const ContactUs = () => {
-    const [isLargerThanLG] = useMediaQuery('(min-width: 62em)');
-    const toast = useToast();
-    const submitForm = () => {
-      return toast({
-        title: 'Message sent!🚀',
-        description: 'Thank you for contacting us!',
-        status: 'success',
-        duration: 9000,
-        isClosable: true,
-      });
-    };
+  export default function contact() {
     return (
-      <Flex
-        id="contact"
-        w="full"
-        minHeight="90vh"
-        py="16"
-        px={isLargerThanLG ? '16' : '6'}
-        alignItems="center"
-        flexDirection="column"
-        justifyContent="center"
-      >
-
-        <Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'} mb="6">
-            Contact Us
+      <Container maxW="full" mt={20} centerContent overflow="hidden" id='contact'>
+        <Heading textAlign={"center"} bgGradient='linear(to-b, white, gray)' bgClip='text'>
+            Get in Touch
         </Heading>
-
-  
-        <FormControl
-          w={isLargerThanLG ? '60%' : 'full'}
-          display="flex"
-          flexDirection="column"
-          alignItems="start"
-        >
-          <Input
-            id="fullName"
-            type="text"
-            placeholder="Full Name"
-            mb="5"
-            h="14"
-          />
-  
-          <Input id="email" type="email" placeholder="Email" mb="5" h="14" />
-  
-          <Input id="subject" type="text" placeholder="Subject" mb="5" h="14" />
-  
-          <Textarea placeholder="Enter a message" mb="5" rows={7} p="5" />
-  
-          <Button
-            colorScheme="blue"
-            size="lg"
-            textAlign="left"
-            width="200px"
-            type="submit"
-            onClick={submitForm}
-          >
-            SUBMIT
-          </Button>
-        </FormControl>
-      </Flex>
+        <Flex>
+          <Box
+            bgGradient='linear(to-t,#0c0c0c,#800020,#0c0c0c )'
+            color="white"
+            borderRadius="lg"
+            m={{ sm: 4, md: 16, lg: 10 }}
+            p={{ sm: 5, md: 5, lg: 16 }}>
+            <Box p={4}>
+              <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
+                <WrapItem>
+                  <Box>
+                    <Text mt={{ sm: 3, md: 3, lg: 5 }} color="white">
+                      Fill out the form to contact us
+                    </Text>
+                    <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
+                      <VStack pl={0} spacing={3} alignItems="flex-start">
+                        <Button
+                          size="md"
+                          height="48px"
+                          width="200px"
+                          variant="ghost"
+                          color="#DCE2FF"
+                          _hover={{}}
+                          leftIcon={<MdPhone color="#1970F1" size="20px" />}>
+                          +1876-12345678
+                        </Button>
+                        <Button
+                          size="md"
+                          height="48px"
+                          width="200px"
+                          variant="ghost"
+                          color="#DCE2FF"
+                          _hover={{}}
+                          leftIcon={<MdEmail color="#1970F1" size="20px" />}>
+                          lassecuelasgroup@gmail.com
+                        </Button>
+                        <Button
+                          size="md"
+                          height="48px"
+                          width="200px"
+                          variant="ghost"
+                          color="#DCE2FF"
+                          _hover={{}}
+                          leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
+                          Kingston, Jamaica
+                        </Button>
+                      </VStack>
+                    </Box>
+                    <HStack
+                      mt={{ lg: 10, md: 10 }}
+                      spacing={5}
+                      px={5}
+                      alignItems="flex-start">
+                      <IconButton
+                        aria-label="facebook"
+                        variant="ghost"
+                        size="lg"
+                        isRound={true}
+                        _hover={{ bg: '#0D74FF' }}
+                        icon={<MdFacebook size="28px" />}
+                      />
+                      <IconButton
+                        aria-label="github"
+                        variant="ghost"
+                        size="lg"
+                        isRound={true}
+                        _hover={{ bg: '#0D74FF' }}
+                        icon={<BsTwitter size="28px" />}
+                      />
+                      <IconButton
+                        aria-label="discord"
+                        variant="ghost"
+                        size="lg"
+                        isRound={true}
+                        _hover={{ bg: '#0D74FF' }}
+                        icon={<BsInstagram size="28px" />}
+                      />
+                    </HStack>
+                  </Box>
+                </WrapItem>
+                <WrapItem>
+                  <Box bg="white" borderRadius="lg">
+                    <Box m={8} color="black">
+                      <VStack spacing={5}>
+                        <FormControl id="name">
+                          <FormLabel>Your Name</FormLabel>
+                          <InputGroup borderColor="#E0E1E7">
+                            <InputLeftElement
+                              pointerEvents="none"
+                            >
+                                <BsPerson color="gray.800" />
+                            </InputLeftElement>
+                            <Input type="text" size="md" />
+                          </InputGroup>
+                        </FormControl>
+                        <FormControl id="name">
+                          <FormLabel>Mail</FormLabel>
+                          <InputGroup borderColor="#E0E1E7">
+                            <InputLeftElement
+                              pointerEvents="none"
+                            >
+                                <MdOutlineEmail color="gray.800" />
+                            </InputLeftElement>
+                            <Input type="text" size="md" />
+                          </InputGroup>
+                        </FormControl>
+                        <FormControl id="name">
+                          <FormLabel>Message</FormLabel>
+                          <Textarea
+                            borderColor="gray.300"
+                            _hover={{
+                              borderRadius: 'gray.300',
+                            }}
+                            placeholder="Type your message here"
+                          />
+                        </FormControl>
+                        <FormControl id="name" float="right">
+                          <Button
+                            variant="outline"
+                            bg="#800020"
+                            color="white"
+                            _hover={{}}>
+                            Send Message
+                          </Button>
+                        </FormControl>
+                      </VStack>
+                    </Box>
+                  </Box>
+                </WrapItem>
+              </Wrap>
+            </Box>
+          </Box>
+        </Flex>
+      </Container>
     );
-  };
-  
-  export default ContactUs;
-  
+  }
