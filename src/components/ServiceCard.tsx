@@ -51,7 +51,7 @@ import {
             <Center>  
             { 
                 serviceTitle === "Phone Support" ?
-                    <FaPhoneAlt size={50} /> :
+                    <FaPhoneAlt size={50}/> :
                 serviceTitle === "Pickup & Delivery" ?
                     <FaTruck size={50}/> : 
                 serviceTitle === "Real Time Tracking" ?
@@ -59,15 +59,6 @@ import {
                 null
             }
             </Center>
-  
-            {/* <Heading
-              size="md"
-              pb={5}
-              pt={{ sm: 5, md: 0, lg: 0, xl: 0 }}
-              color={"brand.900"}
-            >
-              
-            </Heading> */}
   
             <Box pt={5} pb={5}>
               <Text overflow={"scroll"} color={useColorModeValue('white', 'gray.800')}>
@@ -77,15 +68,6 @@ import {
   
             <Link isExternal href={serviceLink} w={"100%"}>
                 Learn More
-              {/* <Button
-                colorScheme="brandButton"
-                variant="solid"
-                bgColor={"white"}
-                color={"#800020"}
-                
-              >
-                Learn More
-              </Button> */}
             </Link>
           </CardBody>
         </Stack>
