@@ -64,7 +64,7 @@ import {
                           color="#DCE2FF"
                           _hover={{}}
                           leftIcon={<MdEmail color="white" size="20px" />}>
-                          lassecuelasgroup@gmail.com
+                          lassecuelasgroupltd@gmail.com
                         </Button>
                         <Button
                           size="md"
