@@ -13,7 +13,7 @@ import {
 
 export default function Hero() {
   return (
-    <Box bgGradient='linear(to-b, #0c0c0c, #800020, #0c0c0c)'>
+    <Box bgGradient='linear(to-b, #0c0c0c, #800020, #0c0c0c)' pt={20}>
       <Container maxW={'3xl'}>
         <Stack
           as={Box}
