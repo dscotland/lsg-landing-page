@@ -55,7 +55,16 @@ import {
                           color="#DCE2FF"
                           _hover={{}}
                           leftIcon={<MdPhone color="white" size="20px" />}>
-                          +1876-12345678
+                          +1876-618-7619
+                        </Button>
+                        <Button
+                          size="md"
+                          height="48px"
+                          variant="ghost"
+                          color="#DCE2FF"
+                          _hover={{}}
+                          leftIcon={<MdPhone color="white" size="20px" />}>
+                          +1876-514-7906
                         </Button>
                         <Button
                           size="md"
