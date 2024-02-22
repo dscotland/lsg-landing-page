@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/NavBar";
 import Testimonials from "../components/Testimonials";
+import Gallery from "../components/Gallery";
 import ContactUs from "../components/Contact_Us_Form";
 import Services from "../components/Services";
 import Head from "next/head";
@@ -19,6 +20,7 @@ const Home = () => {
       <Navbar/>
       <Hero/>
       <Services/>
+      <Gallery/>
       <Testimonials/>
       <ContactUs/>
       <Footer/>

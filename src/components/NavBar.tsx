@@ -270,6 +270,10 @@ import { useState } from 'react';
       ],
     },
     {
+      label: 'Gallery',
+      href: '/#gallery',
+    },
+    {
       label: 'Testimonials',
       href: '/#testimonials',
     },
